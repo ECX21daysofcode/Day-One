@@ -1,14 +1,11 @@
 const  express = require("express")
 
 const app = express()
-const route = require("../src/router/router")
-const  notFound = require("../src/middleware/NotFound")
-
+const port = 3060
 app.use(
     express.json()
 )
-app.use("/",route)
-app.use(notFound)
 
-app.listen(()=>{
-    console.log("am here")})
+app.listen(port,()=>{
+    console.log(`am here`)
+})
